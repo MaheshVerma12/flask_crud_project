@@ -13,7 +13,7 @@ def get_contacts():
     return jsonify({"contacts":json_contacts}), 200
 
 #Get one contact by id.
-@app.route("/contacts/<int:contact_id>/", methods=["GET"])
+@app.route("/contacts/<int:contact_id>", methods=["GET"])
 def get_contact(contact_id):
     contact=Contact.query.get(contact_id)
     if not contact:
@@ -22,7 +22,7 @@ def get_contact(contact_id):
 
 #Create
 #Required values for create endpoint -> first_name, last_name and email.
-@app.route("/contacts/", methods=["POST"])
+@app.route("/create_contact", methods=["POST"])
 def create_contact():
     first_name=request.json.get("firstName")
     last_name=request.json.get("lastName")
@@ -40,7 +40,7 @@ def create_contact():
     return jsonify({"message":"Contact created successfully."}), 201
 
 
-@app.route("/update_contact/<int:contact_id>/", methods=["PATCH"])
+@app.route("/update_contact/<int:contact_id>", methods=["PATCH"])
 def update_contact(contact_id):
     contact=Contact.query.get(contact_id)
     if not contact:
@@ -57,7 +57,7 @@ def update_contact(contact_id):
     return jsonify({"message":"Contact updated successfully."}), 200
 
 #Delete one contact.
-@app.route("/delete_contact/<int:contact_id>/", methods=["DELETE"])
+@app.route("/delete_contact/<int:contact_id>", methods=["DELETE"])
 def delete_contact(contact_id):
     contact=Contact.query.get(contact_id)
     if not contact:
@@ -75,5 +75,3 @@ if __name__=="__main__":
     with app.app_context():
         db.create_all()
     app.run(debug=True)
-
-
