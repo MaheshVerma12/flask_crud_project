@@ -1,5 +1,4 @@
-This is a React JS frontend and Flask backend full stack project. This project was done by following tutorials from "Tech With Tim" YouTube channel, although I myself have typed out the backend codes
-by understanding what is happening. The link of the YouTube video of this project is -> "https://www.youtube.com/watch?v=PppslXOR7TA&t=2664s". 
+This is a React JS frontend and Flask backend full stack project. This project was done by following tutorials from "Tech With Tim" YouTube channel, although I myself have typed out the backend code by understanding what is happening. The link of the YouTube video of this project is -> "https://www.youtube.com/watch?v=PppslXOR7TA&t=2664s". 
 The project has a contact model with fields id, first_name, last_name and email and has Flask create, read, update and delete (CRUD) endpoints for the model. The description of the backend 
 is given below. 
 # Backend API
